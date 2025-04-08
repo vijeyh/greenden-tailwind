@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "aside article"
+          "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 10px;
+        height: 100vh;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #009999;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+      }
+
+      aside {
+        grid-area: aside;
+        background-color: #66cc66;
+        color: white;
+        padding: 20px;
+        font-size: 20px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+
+      article {
+        grid-area: article;
+        background-color: #ffcc33;
+        color: #fff;
+        padding: 20px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 1fr auto;
+        gap: 10px;
+      }
+      .article {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-top: 400px;
+      }
+
+      .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      .image-box {
+        background-color: #ffdb4d;
+        padding: 40px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #008080;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <aside>Aside</aside>
+      <article>
+        <div class="article">Article</div>
+        <div class="images">
+          <div class="image-box">Image</div>
+          <div class="image-box">Image</div>
+          <div class="image-box">Image</div>
+        </div>
+      </article>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

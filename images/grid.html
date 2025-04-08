@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: 1fr 3fr 1fr;
+      }
+      .header {
+        background-color: skyblue;
+        padding: 5px;
+      }
+      .middle {
+        background-color: black;
+        color: white;
+        padding: 5px;
+      }
+      .one {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+      .main-container {
+        background-color: green;
+        color: black;
+        height: 100px;
+        margin: 2px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .sidebar {
+        background-color: violet;
+        margin: 2px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .twin {
+        background-color: orange;
+        height: 100px;
+        margin: 2px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer {
+        background-color: blue;
+
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="middle">
+        <div class="one">
+          <div class="main-container">Main</div>
+          <div class="sidebar">Sidebar</div>
+        </div>
+        <div class="two">
+          <div class="twin">Twin</div>
+          <div class="twin">Twin</div>
+        </div>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
